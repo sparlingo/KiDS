@@ -1,0 +1,83 @@
+fragment ScheduledOperation on ScheduledOperation {
+  stage
+  remoteId: id
+  createdAt
+  updatedAt
+  publishedAt
+  description
+  errorMessage
+  rawPayload
+  createdBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  updatedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  publishedBy {
+    ... on User {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  release {
+    ... on ScheduledRelease {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  status
+  affectedDocuments {
+    ... on Asset {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+    ... on Class {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+    ... on Lesson {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+    ... on LessonPlan {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+    ... on Letter {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+    ... on Phrase {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+    ... on Student {
+      remoteTypeName: __typename
+      remoteId: id
+      locale
+      stage
+    }
+    ... on Word {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+}
